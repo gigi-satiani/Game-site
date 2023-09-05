@@ -1,9 +1,11 @@
+import { CanceledError } from "axios";
 import { useState, useEffect } from "react";
 import apiAxios from "../services/api-axios";
 
-interface Game {
+export interface Game {
   id: number;
   name: string;
+  background_image: string;
 }
 
 interface FetchedResponseType {
@@ -21,7 +23,10 @@ const useGames = () => {
     apiAxios
       .get<FetchedResponseType>("/games", { signal: controller.signal })
       .then((res) => setGames(res.data.results))
-      .catch((err) => setError(err.message));
+      .catch((err) => {
+        if (err instanceof CanceledError) return;
+        setError(err.message);
+      });
 
     return () => controller.abort();
   }, []);
