@@ -6,11 +6,11 @@ interface Props {
 
 const CriticScore = ({ score }: Props) => {
   let color =
-    score > 80
+    score >= 80
       ? "green"
-      : score > 60
+      : score >= 60
       ? "yellow"
-      : score > 40
+      : score >= 40
       ? "orange"
       : "red";
 
