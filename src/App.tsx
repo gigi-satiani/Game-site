@@ -19,9 +19,9 @@ export interface GameQuery {
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
 
-  function searchText(searchText: string): void {
-    throw new Error("Function not implemented.");
-  }
+  // function searchText(searchText: string): void {
+  //   throw new Error("Function not implemented.");
+  // }
 
   return (
     <Grid
