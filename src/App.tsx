@@ -19,12 +19,6 @@ export interface GameQuery {
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
 
-  console.log(gameQuery, "@@@1");
-  useEffect(() => {
-    console.log(gameQuery, "@@@2");
-  });
-  console.log(gameQuery, "@@@3");
-
   return (
     <Grid
       templateAreas={{
