@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { GameQuery } from "../App";
 import apiClient from "../services/api-axios";
-import { FetchResponse } from "./useData";
+import { FetchResponse } from "../services/api-axios";
 
 export interface Platform {
   id: number;

@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { FetchResponse } from "./useData";
+import { FetchResponse } from "../services/api-axios";
 import apiclient from "../services/api-axios";
 
 export interface Genre {
