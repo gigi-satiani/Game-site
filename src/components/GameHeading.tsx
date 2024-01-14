@@ -9,6 +9,8 @@ const GameHeading = ({ gameQuery }: Props) => {
   const heading = `${gameQuery.genre?.name || ""} ${
     gameQuery.platform?.name || ""
   } ${gameQuery.sortOrder || ""}`;
+
+  console.log(gameQuery, "@@@");
   return (
     <Heading as={"h1"} marginY={5} fontSize={"3xl"}>
       {heading}

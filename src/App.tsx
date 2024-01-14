@@ -5,7 +5,7 @@ import GenreList from "./components/GenreList";
 import PlatformSelector from "./components/PlatformSelector";
 import SortSelector from "./components/SortSelector";
 import { Box, Grid, GridItem, HStack, Show } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Genre } from "./hooks/useGenres";
 import { Platform } from "./hooks/useGames";
 import GameHeading from "./components/GameHeading";
@@ -19,9 +19,11 @@ export interface GameQuery {
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
 
-  // function searchText(searchText: string): void {
-  //   throw new Error("Function not implemented.");
-  // }
+  console.log(gameQuery, "@@@1");
+  useEffect(() => {
+    console.log(gameQuery, "@@@2");
+  });
+  console.log(gameQuery, "@@@3");
 
   return (
     <Grid
